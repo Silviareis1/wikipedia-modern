@@ -1,0 +1,137 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+a:link {
+    color: rgba(3, 175, 63, 0.97);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(146, 5, 167);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+    color: rgba(3, 175, 63, 0.97);
+}
+
+header {
+    width: 100%;
+    top: 0;
+    background-color: #f8f9fa;
+    padding: 0.1rem;
+    border-bottom: 2px solid #cdcdcd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    max-width: 1440px;
+    margin: auto;
+    grid-gap: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0, 13rem) minmax(0, 2.5fr) minmax(0, 13rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 100vh;
+    overflow: hidden;
+    /* imp. p/ manter só o main rolando */
+}
+
+.main {
+    grid-area: main;
+    overflow-y: auto;
+    height: 100vh;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.footer {
+    min-height: 100px;
+    border-top: solid 1px #cdcdcd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    margin-top: 3px;
+}
+
+.anchors {
+    grid-area: anchors;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    /* overflow-y: auto; */
+    padding: 1rem;
+    padding-left: 15px;
+    border-left: solid 1px #cdcdcd;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    /* overflow-y: auto; */
+    padding: 1rem;
+    border-right: solid 1px #cdcdcd;
+    background-color: #f8f9fa;
+}
+
+iframe {
+    width: 500px;
+    /* ou a largura desejada */
+    height: 300px;
+    /* ou a altura desejada */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* Garante que o iframe se comporte como um bloco */
+}
+
+section figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 250px;
+    margin: auto;
+}
+
+img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
